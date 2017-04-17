@@ -1,0 +1,4964 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/intel-iot-devkit/mraa"
+
+    >mraa (v1.6.1)</a>
+</h1>
+<h4>IO library that helps you use I2c, SPI, gpio, uart, pwm, analog inputs (aio) and more on a number of platforms such as the Intel galileo, the Intel edison and others</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa">module mraa</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio">
+            function <span class="apidocSignatureSpan">mraa.</span>Aio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>Aio.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>Aio.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.nop">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio.nop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.uvwork">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio.uvwork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.v8isr">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio.v8isr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gruntfile">
+            function <span class="apidocSignatureSpan">mraa.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c">
+            function <span class="apidocSignatureSpan">mraa.</span>I2c
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>I2c.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>I2c.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm">
+            function <span class="apidocSignatureSpan">mraa.</span>Pwm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>Pwm.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>Pwm.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi">
+            function <span class="apidocSignatureSpan">mraa.</span>Spi
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>Spi.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>Spi.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart">
+            function <span class="apidocSignatureSpan">mraa.</span>Uart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>Uart.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>Uart.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.adcRawBits">
+            function <span class="apidocSignatureSpan">mraa.</span>adcRawBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.adcSupportedBits">
+            function <span class="apidocSignatureSpan">mraa.</span>adcSupportedBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.addSubplatform">
+            function <span class="apidocSignatureSpan">mraa.</span>addSubplatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.aioFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>aioFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getDefaultI2cBus">
+            function <span class="apidocSignatureSpan">mraa.</span>getDefaultI2cBus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getI2cBusCount">
+            function <span class="apidocSignatureSpan">mraa.</span>getI2cBusCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getI2cBusId">
+            function <span class="apidocSignatureSpan">mraa.</span>getI2cBusId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPinCount">
+            function <span class="apidocSignatureSpan">mraa.</span>getPinCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPinName">
+            function <span class="apidocSignatureSpan">mraa.</span>getPinName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformName">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformType">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformType
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformVersion">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getSubPlatformId">
+            function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getSubPlatformIndex">
+            function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformIndex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getVersion">
+            function <span class="apidocSignatureSpan">mraa.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.gpioFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>gpioFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.hasSubPlatform">
+            function <span class="apidocSignatureSpan">mraa.</span>hasSubPlatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.i2cFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>i2cFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.init">
+            function <span class="apidocSignatureSpan">mraa.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.initJsonPlatform">
+            function <span class="apidocSignatureSpan">mraa.</span>initJsonPlatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.isSubPlatformId">
+            function <span class="apidocSignatureSpan">mraa.</span>isSubPlatformId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.pinModeTest">
+            function <span class="apidocSignatureSpan">mraa.</span>pinModeTest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.printError">
+            function <span class="apidocSignatureSpan">mraa.</span>printError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.pwmFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>pwmFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.removeSubplatform">
+            function <span class="apidocSignatureSpan">mraa.</span>removeSubplatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.setLogLevel">
+            function <span class="apidocSignatureSpan">mraa.</span>setLogLevel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.setPriority">
+            function <span class="apidocSignatureSpan">mraa.</span>setPriority
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.spiFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>spiFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uartFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>uartFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array">
+            function <span class="apidocSignatureSpan">mraa.</span>uint8Array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.frompointer">
+            function <span class="apidocSignatureSpan">mraa.</span>uint8Array.frompointer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.</span>uint8Array.prototype.equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.</span>uint8Array.prototype.getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>A96BOARDS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>BANANA</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>BEAGLEBONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>DE_NANO_SOC</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>DIR_IN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>DIR_OUT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>DIR_OUT_HIGH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>DIR_OUT_LOW</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>EDGE_BOTH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>EDGE_FALLING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>EDGE_NONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>EDGE_RISING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_FEATURE_NOT_IMPLEMENTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_FEATURE_NOT_SUPPORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_HANDLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_PARAMETER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_PLATFORM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_QUEUE_TYPE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_RESOURCE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_INVALID_VERBOSITY_LEVEL</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_NO_DATA_AVAILABLE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_NO_RESOURCES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_PLATFORM_NOT_INITIALISED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_UART_OW_DATA_ERROR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_UART_OW_NO_DEVICES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_UART_OW_SHORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>ERROR_UNSPECIFIED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>FTDI_FT4222</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>GENERIC_FIRMATA</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>I2C_FAST</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>I2C_HIGH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>I2C_STD</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_CHERRYHILLS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_DE3815</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_FAB_C</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP109</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP110</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP111</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP114</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP115</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP128</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP129</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP13</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP130</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP131</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP134</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP135</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP14</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP15</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP165</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP182</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP183</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP19</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP20</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP27</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP28</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP40</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP41</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP42</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP43</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP44</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP45</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP46</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP47</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP48</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP49</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP77</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP78</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP79</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP80</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP81</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP82</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP83</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_GP84</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_11</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_14</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_7</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J17_9</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_11</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_13</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_6</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_7</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J18_8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_11</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_13</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_14</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_6</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J19_9</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_11</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_13</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_14</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_3</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_6</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_7</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_EDISON_MINIBOARD_J20_9</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_GALILEO_GEN1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_GALILEO_GEN2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_JOULE_EXPANSION</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_MINNOWBOARD_MAX</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_NUC5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_SOFIA_3GR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>INTEL_UP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>MODE_HIZ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>MODE_PULLDOWN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>MODE_PULLUP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>MODE_STRONG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>NULL_PLATFORM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PHYBOARD_WEGA</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_AIO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_FAST_GPIO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_GPIO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_I2C</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_PWM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_SPI</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_UART</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>PIN_VALID</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_PI</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN11</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN12</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN13</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN14</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN15</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN16</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN17</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN18</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN19</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN20</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN21</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN22</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN23</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN24</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN25</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN26</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN27</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN28</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN29</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN3</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN4</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN5</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN6</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN7</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN8</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>RASPBERRY_WIRING_PIN9</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>SPI_MODE0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>SPI_MODE1</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>SPI_MODE2</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>SPI_MODE3</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>SUCCESS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UART_PARITY_EVEN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UART_PARITY_MARK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UART_PARITY_NONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UART_PARITY_ODD</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UART_PARITY_SPACE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">mraa.</span>UNKNOWN_PLATFORM</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>Aio.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>Gpio.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>I2c.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>Pwm.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>Spi.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>Uart.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mraa.</span>uint8Array.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Aio">module mraa.Aio</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.Aio">
+            function <span class="apidocSignatureSpan">mraa.</span>Aio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Aio.prototype">module mraa.Aio.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Aio.prototype.equals">module mraa.Aio.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Aio.prototype.getCPtr">module mraa.Aio.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Aio.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio">module mraa.Gpio</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.Gpio">
+            function <span class="apidocSignatureSpan">mraa.</span>Gpio
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.nop">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>nop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.uvwork">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>uvwork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.v8isr">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>v8isr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.nop">module mraa.Gpio.nop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.nop.nop">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>nop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.prototype">module mraa.Gpio.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.prototype.equals">module mraa.Gpio.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.prototype.getCPtr">module mraa.Gpio.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.uvwork">module mraa.Gpio.uvwork</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.uvwork.uvwork">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>uvwork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gpio.v8isr">module mraa.Gpio.v8isr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gpio.v8isr.v8isr">
+            function <span class="apidocSignatureSpan">mraa.Gpio.</span>v8isr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Gruntfile">module mraa.Gruntfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Gruntfile.Gruntfile">
+            function <span class="apidocSignatureSpan">mraa.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.I2c">module mraa.I2c</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.I2c">
+            function <span class="apidocSignatureSpan">mraa.</span>I2c
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.I2c.prototype">module mraa.I2c.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.I2c.prototype.equals">module mraa.I2c.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.I2c.prototype.getCPtr">module mraa.I2c.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.I2c.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Pwm">module mraa.Pwm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.Pwm">
+            function <span class="apidocSignatureSpan">mraa.</span>Pwm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Pwm.prototype">module mraa.Pwm.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Pwm.prototype.equals">module mraa.Pwm.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Pwm.prototype.getCPtr">module mraa.Pwm.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Pwm.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Spi">module mraa.Spi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.Spi">
+            function <span class="apidocSignatureSpan">mraa.</span>Spi
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Spi.prototype">module mraa.Spi.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Spi.prototype.equals">module mraa.Spi.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Spi.prototype.getCPtr">module mraa.Spi.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Spi.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Uart">module mraa.Uart</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.Uart">
+            function <span class="apidocSignatureSpan">mraa.</span>Uart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Uart.prototype">module mraa.Uart.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Uart.prototype.equals">module mraa.Uart.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.Uart.prototype.getCPtr">module mraa.Uart.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.Uart.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.adcRawBits">module mraa.adcRawBits</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.adcRawBits.adcRawBits">
+            function <span class="apidocSignatureSpan">mraa.</span>adcRawBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.adcSupportedBits">module mraa.adcSupportedBits</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.adcSupportedBits.adcSupportedBits">
+            function <span class="apidocSignatureSpan">mraa.</span>adcSupportedBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.addSubplatform">module mraa.addSubplatform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.addSubplatform.addSubplatform">
+            function <span class="apidocSignatureSpan">mraa.</span>addSubplatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.aioFromDesc">module mraa.aioFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.aioFromDesc.aioFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>aioFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getDefaultI2cBus">module mraa.getDefaultI2cBus</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getDefaultI2cBus.getDefaultI2cBus">
+            function <span class="apidocSignatureSpan">mraa.</span>getDefaultI2cBus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getI2cBusCount">module mraa.getI2cBusCount</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getI2cBusCount.getI2cBusCount">
+            function <span class="apidocSignatureSpan">mraa.</span>getI2cBusCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getI2cBusId">module mraa.getI2cBusId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getI2cBusId.getI2cBusId">
+            function <span class="apidocSignatureSpan">mraa.</span>getI2cBusId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getPinCount">module mraa.getPinCount</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPinCount.getPinCount">
+            function <span class="apidocSignatureSpan">mraa.</span>getPinCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getPinName">module mraa.getPinName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPinName.getPinName">
+            function <span class="apidocSignatureSpan">mraa.</span>getPinName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getPlatformName">module mraa.getPlatformName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformName.getPlatformName">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getPlatformType">module mraa.getPlatformType</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformType.getPlatformType">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformType
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getPlatformVersion">module mraa.getPlatformVersion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getPlatformVersion.getPlatformVersion">
+            function <span class="apidocSignatureSpan">mraa.</span>getPlatformVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getSubPlatformId">module mraa.getSubPlatformId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getSubPlatformId.getSubPlatformId">
+            function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getSubPlatformIndex">module mraa.getSubPlatformIndex</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getSubPlatformIndex.getSubPlatformIndex">
+            function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformIndex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.getVersion">module mraa.getVersion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.getVersion.getVersion">
+            function <span class="apidocSignatureSpan">mraa.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.gpioFromDesc">module mraa.gpioFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.gpioFromDesc.gpioFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>gpioFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.hasSubPlatform">module mraa.hasSubPlatform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.hasSubPlatform.hasSubPlatform">
+            function <span class="apidocSignatureSpan">mraa.</span>hasSubPlatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.i2cFromDesc">module mraa.i2cFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.i2cFromDesc.i2cFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>i2cFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.init">module mraa.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.init.init">
+            function <span class="apidocSignatureSpan">mraa.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.initJsonPlatform">module mraa.initJsonPlatform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.initJsonPlatform.initJsonPlatform">
+            function <span class="apidocSignatureSpan">mraa.</span>initJsonPlatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.isSubPlatformId">module mraa.isSubPlatformId</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.isSubPlatformId.isSubPlatformId">
+            function <span class="apidocSignatureSpan">mraa.</span>isSubPlatformId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.pinModeTest">module mraa.pinModeTest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.pinModeTest.pinModeTest">
+            function <span class="apidocSignatureSpan">mraa.</span>pinModeTest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.printError">module mraa.printError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.printError.printError">
+            function <span class="apidocSignatureSpan">mraa.</span>printError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.pwmFromDesc">module mraa.pwmFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.pwmFromDesc.pwmFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>pwmFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.removeSubplatform">module mraa.removeSubplatform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.removeSubplatform.removeSubplatform">
+            function <span class="apidocSignatureSpan">mraa.</span>removeSubplatform
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.setLogLevel">module mraa.setLogLevel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.setLogLevel.setLogLevel">
+            function <span class="apidocSignatureSpan">mraa.</span>setLogLevel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.setPriority">module mraa.setPriority</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.setPriority.setPriority">
+            function <span class="apidocSignatureSpan">mraa.</span>setPriority
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.spiFromDesc">module mraa.spiFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.spiFromDesc.spiFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>spiFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uartFromDesc">module mraa.uartFromDesc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uartFromDesc.uartFromDesc">
+            function <span class="apidocSignatureSpan">mraa.</span>uartFromDesc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uint8Array">module mraa.uint8Array</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.uint8Array">
+            function <span class="apidocSignatureSpan">mraa.</span>uint8Array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.frompointer">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.</span>frompointer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uint8Array.frompointer">module mraa.uint8Array.frompointer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.frompointer.frompointer">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.</span>frompointer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uint8Array.prototype">module mraa.uint8Array.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.equals">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uint8Array.prototype.equals">module mraa.uint8Array.prototype.equals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.equals.equals">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mraa.uint8Array.prototype.getCPtr">module mraa.uint8Array.prototype.getCPtr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mraa.uint8Array.prototype.getCPtr.getCPtr">
+            function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>getCPtr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa" id="apidoc.module.mraa">module mraa</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio" id="apidoc.element.mraa.Aio">
+        function <span class="apidocSignatureSpan">mraa.</span>Aio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Aio() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.equals" id="apidoc.element.mraa.Aio.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>Aio.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.getCPtr" id="apidoc.element.mraa.Aio.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>Aio.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio" id="apidoc.element.mraa.Gpio">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Gpio() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.nop" id="apidoc.element.mraa.Gpio.nop">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio.nop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gpio.nop = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.equals" id="apidoc.element.mraa.Gpio.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.getCPtr" id="apidoc.element.mraa.Gpio.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.uvwork" id="apidoc.element.mraa.Gpio.uvwork">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio.uvwork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gpio.uvwork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.v8isr" id="apidoc.element.mraa.Gpio.v8isr">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio.v8isr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gpio.v8isr = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gruntfile" id="apidoc.element.mraa.Gruntfile">
+        function <span class="apidocSignatureSpan">mraa.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+  grunt.loadNpmTasks(&#x27;grunt-mocha-test&#x27;);
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON(&#x27;package.json&#x27;),
+    mochaTest: {
+      test: {
+        options: {
+          reporter: &#x27;spec&#x27;
+        },
+        src: [&#x27;test/*.js&#x27;]
+      }
+    }
+  });
+
+  grunt.registerTask(&#x27;test&#x27;, [&#x27;mochaTest:test&#x27;]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c" id="apidoc.element.mraa.I2c">
+        function <span class="apidocSignatureSpan">mraa.</span>I2c
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function I2c() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.equals" id="apidoc.element.mraa.I2c.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>I2c.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.getCPtr" id="apidoc.element.mraa.I2c.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>I2c.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm" id="apidoc.element.mraa.Pwm">
+        function <span class="apidocSignatureSpan">mraa.</span>Pwm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pwm() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.equals" id="apidoc.element.mraa.Pwm.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>Pwm.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.getCPtr" id="apidoc.element.mraa.Pwm.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>Pwm.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi" id="apidoc.element.mraa.Spi">
+        function <span class="apidocSignatureSpan">mraa.</span>Spi
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spi() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.equals" id="apidoc.element.mraa.Spi.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>Spi.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.getCPtr" id="apidoc.element.mraa.Spi.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>Spi.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart" id="apidoc.element.mraa.Uart">
+        function <span class="apidocSignatureSpan">mraa.</span>Uart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Uart() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.equals" id="apidoc.element.mraa.Uart.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>Uart.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.getCPtr" id="apidoc.element.mraa.Uart.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>Uart.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.adcRawBits" id="apidoc.element.mraa.adcRawBits">
+        function <span class="apidocSignatureSpan">mraa.</span>adcRawBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">adcRawBits = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.adcSupportedBits" id="apidoc.element.mraa.adcSupportedBits">
+        function <span class="apidocSignatureSpan">mraa.</span>adcSupportedBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">adcSupportedBits = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.addSubplatform" id="apidoc.element.mraa.addSubplatform">
+        function <span class="apidocSignatureSpan">mraa.</span>addSubplatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSubplatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.aioFromDesc" id="apidoc.element.mraa.aioFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>aioFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">aioFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getDefaultI2cBus" id="apidoc.element.mraa.getDefaultI2cBus">
+        function <span class="apidocSignatureSpan">mraa.</span>getDefaultI2cBus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDefaultI2cBus = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getI2cBusCount" id="apidoc.element.mraa.getI2cBusCount">
+        function <span class="apidocSignatureSpan">mraa.</span>getI2cBusCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getI2cBusCount = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getI2cBusId" id="apidoc.element.mraa.getI2cBusId">
+        function <span class="apidocSignatureSpan">mraa.</span>getI2cBusId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getI2cBusId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPinCount" id="apidoc.element.mraa.getPinCount">
+        function <span class="apidocSignatureSpan">mraa.</span>getPinCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPinCount = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPinName" id="apidoc.element.mraa.getPinName">
+        function <span class="apidocSignatureSpan">mraa.</span>getPinName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPinName = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformName" id="apidoc.element.mraa.getPlatformName">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformName = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformType" id="apidoc.element.mraa.getPlatformType">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformType
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformType = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformVersion" id="apidoc.element.mraa.getPlatformVersion">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformVersion = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getSubPlatformId" id="apidoc.element.mraa.getSubPlatformId">
+        function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSubPlatformId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getSubPlatformIndex" id="apidoc.element.mraa.getSubPlatformIndex">
+        function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformIndex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSubPlatformIndex = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getVersion" id="apidoc.element.mraa.getVersion">
+        function <span class="apidocSignatureSpan">mraa.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.gpioFromDesc" id="apidoc.element.mraa.gpioFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>gpioFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gpioFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.hasSubPlatform" id="apidoc.element.mraa.hasSubPlatform">
+        function <span class="apidocSignatureSpan">mraa.</span>hasSubPlatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasSubPlatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.i2cFromDesc" id="apidoc.element.mraa.i2cFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>i2cFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">i2cFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.init" id="apidoc.element.mraa.init">
+        function <span class="apidocSignatureSpan">mraa.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.initJsonPlatform" id="apidoc.element.mraa.initJsonPlatform">
+        function <span class="apidocSignatureSpan">mraa.</span>initJsonPlatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initJsonPlatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.isSubPlatformId" id="apidoc.element.mraa.isSubPlatformId">
+        function <span class="apidocSignatureSpan">mraa.</span>isSubPlatformId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSubPlatformId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.pinModeTest" id="apidoc.element.mraa.pinModeTest">
+        function <span class="apidocSignatureSpan">mraa.</span>pinModeTest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pinModeTest = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.printError" id="apidoc.element.mraa.printError">
+        function <span class="apidocSignatureSpan">mraa.</span>printError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printError = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.pwmFromDesc" id="apidoc.element.mraa.pwmFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>pwmFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.removeSubplatform" id="apidoc.element.mraa.removeSubplatform">
+        function <span class="apidocSignatureSpan">mraa.</span>removeSubplatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeSubplatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.setLogLevel" id="apidoc.element.mraa.setLogLevel">
+        function <span class="apidocSignatureSpan">mraa.</span>setLogLevel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setLogLevel = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.setPriority" id="apidoc.element.mraa.setPriority">
+        function <span class="apidocSignatureSpan">mraa.</span>setPriority
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPriority = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.spiFromDesc" id="apidoc.element.mraa.spiFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>spiFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spiFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uartFromDesc" id="apidoc.element.mraa.uartFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>uartFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uartFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array" id="apidoc.element.mraa.uint8Array">
+        function <span class="apidocSignatureSpan">mraa.</span>uint8Array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uint8Array() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.frompointer" id="apidoc.element.mraa.uint8Array.frompointer">
+        function <span class="apidocSignatureSpan">mraa.</span>uint8Array.frompointer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uint8Array.frompointer = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.equals" id="apidoc.element.mraa.uint8Array.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.</span>uint8Array.prototype.equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.getCPtr" id="apidoc.element.mraa.uint8Array.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.</span>uint8Array.prototype.getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Aio" id="apidoc.module.mraa.Aio">module mraa.Aio</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.Aio" id="apidoc.element.mraa.Aio.Aio">
+        function <span class="apidocSignatureSpan">mraa.</span>Aio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Aio() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Aio.prototype" id="apidoc.module.mraa.Aio.prototype">module mraa.Aio.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.equals" id="apidoc.element.mraa.Aio.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.getCPtr" id="apidoc.element.mraa.Aio.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Aio.prototype.equals" id="apidoc.module.mraa.Aio.prototype.equals">module mraa.Aio.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.equals.equals" id="apidoc.element.mraa.Aio.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Aio.prototype.getCPtr" id="apidoc.module.mraa.Aio.prototype.getCPtr">module mraa.Aio.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Aio.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.Aio.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Aio.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio" id="apidoc.module.mraa.Gpio">module mraa.Gpio</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.Gpio" id="apidoc.element.mraa.Gpio.Gpio">
+        function <span class="apidocSignatureSpan">mraa.</span>Gpio
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Gpio() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.nop" id="apidoc.element.mraa.Gpio.nop">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>nop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nop = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.uvwork" id="apidoc.element.mraa.Gpio.uvwork">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>uvwork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uvwork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.v8isr" id="apidoc.element.mraa.Gpio.v8isr">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>v8isr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">v8isr = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.nop" id="apidoc.module.mraa.Gpio.nop">module mraa.Gpio.nop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.nop.nop" id="apidoc.element.mraa.Gpio.nop.nop">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>nop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nop = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.prototype" id="apidoc.module.mraa.Gpio.prototype">module mraa.Gpio.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.equals" id="apidoc.element.mraa.Gpio.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.getCPtr" id="apidoc.element.mraa.Gpio.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.prototype.equals" id="apidoc.module.mraa.Gpio.prototype.equals">module mraa.Gpio.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.equals.equals" id="apidoc.element.mraa.Gpio.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.prototype.getCPtr" id="apidoc.module.mraa.Gpio.prototype.getCPtr">module mraa.Gpio.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.Gpio.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Gpio.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.uvwork" id="apidoc.module.mraa.Gpio.uvwork">module mraa.Gpio.uvwork</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.uvwork.uvwork" id="apidoc.element.mraa.Gpio.uvwork.uvwork">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>uvwork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uvwork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gpio.v8isr" id="apidoc.module.mraa.Gpio.v8isr">module mraa.Gpio.v8isr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gpio.v8isr.v8isr" id="apidoc.element.mraa.Gpio.v8isr.v8isr">
+        function <span class="apidocSignatureSpan">mraa.Gpio.</span>v8isr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">v8isr = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Gruntfile" id="apidoc.module.mraa.Gruntfile">module mraa.Gruntfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Gruntfile.Gruntfile" id="apidoc.element.mraa.Gruntfile.Gruntfile">
+        function <span class="apidocSignatureSpan">mraa.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+  grunt.loadNpmTasks(&#x27;grunt-mocha-test&#x27;);
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON(&#x27;package.json&#x27;),
+    mochaTest: {
+      test: {
+        options: {
+          reporter: &#x27;spec&#x27;
+        },
+        src: [&#x27;test/*.js&#x27;]
+      }
+    }
+  });
+
+  grunt.registerTask(&#x27;test&#x27;, [&#x27;mochaTest:test&#x27;]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.I2c" id="apidoc.module.mraa.I2c">module mraa.I2c</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.I2c" id="apidoc.element.mraa.I2c.I2c">
+        function <span class="apidocSignatureSpan">mraa.</span>I2c
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function I2c() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.I2c.prototype" id="apidoc.module.mraa.I2c.prototype">module mraa.I2c.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.equals" id="apidoc.element.mraa.I2c.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.getCPtr" id="apidoc.element.mraa.I2c.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.I2c.prototype.equals" id="apidoc.module.mraa.I2c.prototype.equals">module mraa.I2c.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.equals.equals" id="apidoc.element.mraa.I2c.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.I2c.prototype.getCPtr" id="apidoc.module.mraa.I2c.prototype.getCPtr">module mraa.I2c.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.I2c.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.I2c.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.I2c.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Pwm" id="apidoc.module.mraa.Pwm">module mraa.Pwm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.Pwm" id="apidoc.element.mraa.Pwm.Pwm">
+        function <span class="apidocSignatureSpan">mraa.</span>Pwm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pwm() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Pwm.prototype" id="apidoc.module.mraa.Pwm.prototype">module mraa.Pwm.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.equals" id="apidoc.element.mraa.Pwm.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.getCPtr" id="apidoc.element.mraa.Pwm.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Pwm.prototype.equals" id="apidoc.module.mraa.Pwm.prototype.equals">module mraa.Pwm.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.equals.equals" id="apidoc.element.mraa.Pwm.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Pwm.prototype.getCPtr" id="apidoc.module.mraa.Pwm.prototype.getCPtr">module mraa.Pwm.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Pwm.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.Pwm.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Pwm.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Spi" id="apidoc.module.mraa.Spi">module mraa.Spi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.Spi" id="apidoc.element.mraa.Spi.Spi">
+        function <span class="apidocSignatureSpan">mraa.</span>Spi
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spi() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Spi.prototype" id="apidoc.module.mraa.Spi.prototype">module mraa.Spi.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.equals" id="apidoc.element.mraa.Spi.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.getCPtr" id="apidoc.element.mraa.Spi.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Spi.prototype.equals" id="apidoc.module.mraa.Spi.prototype.equals">module mraa.Spi.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.equals.equals" id="apidoc.element.mraa.Spi.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Spi.prototype.getCPtr" id="apidoc.module.mraa.Spi.prototype.getCPtr">module mraa.Spi.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Spi.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.Spi.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Spi.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Uart" id="apidoc.module.mraa.Uart">module mraa.Uart</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.Uart" id="apidoc.element.mraa.Uart.Uart">
+        function <span class="apidocSignatureSpan">mraa.</span>Uart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Uart() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Uart.prototype" id="apidoc.module.mraa.Uart.prototype">module mraa.Uart.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.equals" id="apidoc.element.mraa.Uart.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.getCPtr" id="apidoc.element.mraa.Uart.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Uart.prototype.equals" id="apidoc.module.mraa.Uart.prototype.equals">module mraa.Uart.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.equals.equals" id="apidoc.element.mraa.Uart.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.Uart.prototype.getCPtr" id="apidoc.module.mraa.Uart.prototype.getCPtr">module mraa.Uart.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.Uart.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.Uart.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.Uart.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.adcRawBits" id="apidoc.module.mraa.adcRawBits">module mraa.adcRawBits</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.adcRawBits.adcRawBits" id="apidoc.element.mraa.adcRawBits.adcRawBits">
+        function <span class="apidocSignatureSpan">mraa.</span>adcRawBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">adcRawBits = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.adcSupportedBits" id="apidoc.module.mraa.adcSupportedBits">module mraa.adcSupportedBits</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.adcSupportedBits.adcSupportedBits" id="apidoc.element.mraa.adcSupportedBits.adcSupportedBits">
+        function <span class="apidocSignatureSpan">mraa.</span>adcSupportedBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">adcSupportedBits = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.addSubplatform" id="apidoc.module.mraa.addSubplatform">module mraa.addSubplatform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.addSubplatform.addSubplatform" id="apidoc.element.mraa.addSubplatform.addSubplatform">
+        function <span class="apidocSignatureSpan">mraa.</span>addSubplatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSubplatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.aioFromDesc" id="apidoc.module.mraa.aioFromDesc">module mraa.aioFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.aioFromDesc.aioFromDesc" id="apidoc.element.mraa.aioFromDesc.aioFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>aioFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">aioFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getDefaultI2cBus" id="apidoc.module.mraa.getDefaultI2cBus">module mraa.getDefaultI2cBus</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getDefaultI2cBus.getDefaultI2cBus" id="apidoc.element.mraa.getDefaultI2cBus.getDefaultI2cBus">
+        function <span class="apidocSignatureSpan">mraa.</span>getDefaultI2cBus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDefaultI2cBus = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getI2cBusCount" id="apidoc.module.mraa.getI2cBusCount">module mraa.getI2cBusCount</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getI2cBusCount.getI2cBusCount" id="apidoc.element.mraa.getI2cBusCount.getI2cBusCount">
+        function <span class="apidocSignatureSpan">mraa.</span>getI2cBusCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getI2cBusCount = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getI2cBusId" id="apidoc.module.mraa.getI2cBusId">module mraa.getI2cBusId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getI2cBusId.getI2cBusId" id="apidoc.element.mraa.getI2cBusId.getI2cBusId">
+        function <span class="apidocSignatureSpan">mraa.</span>getI2cBusId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getI2cBusId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getPinCount" id="apidoc.module.mraa.getPinCount">module mraa.getPinCount</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPinCount.getPinCount" id="apidoc.element.mraa.getPinCount.getPinCount">
+        function <span class="apidocSignatureSpan">mraa.</span>getPinCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPinCount = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getPinName" id="apidoc.module.mraa.getPinName">module mraa.getPinName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPinName.getPinName" id="apidoc.element.mraa.getPinName.getPinName">
+        function <span class="apidocSignatureSpan">mraa.</span>getPinName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPinName = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getPlatformName" id="apidoc.module.mraa.getPlatformName">module mraa.getPlatformName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformName.getPlatformName" id="apidoc.element.mraa.getPlatformName.getPlatformName">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformName = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getPlatformType" id="apidoc.module.mraa.getPlatformType">module mraa.getPlatformType</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformType.getPlatformType" id="apidoc.element.mraa.getPlatformType.getPlatformType">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformType
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformType = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getPlatformVersion" id="apidoc.module.mraa.getPlatformVersion">module mraa.getPlatformVersion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getPlatformVersion.getPlatformVersion" id="apidoc.element.mraa.getPlatformVersion.getPlatformVersion">
+        function <span class="apidocSignatureSpan">mraa.</span>getPlatformVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatformVersion = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getSubPlatformId" id="apidoc.module.mraa.getSubPlatformId">module mraa.getSubPlatformId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getSubPlatformId.getSubPlatformId" id="apidoc.element.mraa.getSubPlatformId.getSubPlatformId">
+        function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSubPlatformId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getSubPlatformIndex" id="apidoc.module.mraa.getSubPlatformIndex">module mraa.getSubPlatformIndex</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getSubPlatformIndex.getSubPlatformIndex" id="apidoc.element.mraa.getSubPlatformIndex.getSubPlatformIndex">
+        function <span class="apidocSignatureSpan">mraa.</span>getSubPlatformIndex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSubPlatformIndex = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.getVersion" id="apidoc.module.mraa.getVersion">module mraa.getVersion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.getVersion.getVersion" id="apidoc.element.mraa.getVersion.getVersion">
+        function <span class="apidocSignatureSpan">mraa.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.gpioFromDesc" id="apidoc.module.mraa.gpioFromDesc">module mraa.gpioFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.gpioFromDesc.gpioFromDesc" id="apidoc.element.mraa.gpioFromDesc.gpioFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>gpioFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gpioFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.hasSubPlatform" id="apidoc.module.mraa.hasSubPlatform">module mraa.hasSubPlatform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.hasSubPlatform.hasSubPlatform" id="apidoc.element.mraa.hasSubPlatform.hasSubPlatform">
+        function <span class="apidocSignatureSpan">mraa.</span>hasSubPlatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasSubPlatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.i2cFromDesc" id="apidoc.module.mraa.i2cFromDesc">module mraa.i2cFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.i2cFromDesc.i2cFromDesc" id="apidoc.element.mraa.i2cFromDesc.i2cFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>i2cFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">i2cFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.init" id="apidoc.module.mraa.init">module mraa.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.init.init" id="apidoc.element.mraa.init.init">
+        function <span class="apidocSignatureSpan">mraa.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.initJsonPlatform" id="apidoc.module.mraa.initJsonPlatform">module mraa.initJsonPlatform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.initJsonPlatform.initJsonPlatform" id="apidoc.element.mraa.initJsonPlatform.initJsonPlatform">
+        function <span class="apidocSignatureSpan">mraa.</span>initJsonPlatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initJsonPlatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.isSubPlatformId" id="apidoc.module.mraa.isSubPlatformId">module mraa.isSubPlatformId</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.isSubPlatformId.isSubPlatformId" id="apidoc.element.mraa.isSubPlatformId.isSubPlatformId">
+        function <span class="apidocSignatureSpan">mraa.</span>isSubPlatformId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSubPlatformId = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.pinModeTest" id="apidoc.module.mraa.pinModeTest">module mraa.pinModeTest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.pinModeTest.pinModeTest" id="apidoc.element.mraa.pinModeTest.pinModeTest">
+        function <span class="apidocSignatureSpan">mraa.</span>pinModeTest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pinModeTest = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.printError" id="apidoc.module.mraa.printError">module mraa.printError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.printError.printError" id="apidoc.element.mraa.printError.printError">
+        function <span class="apidocSignatureSpan">mraa.</span>printError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printError = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.pwmFromDesc" id="apidoc.module.mraa.pwmFromDesc">module mraa.pwmFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.pwmFromDesc.pwmFromDesc" id="apidoc.element.mraa.pwmFromDesc.pwmFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>pwmFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pwmFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.removeSubplatform" id="apidoc.module.mraa.removeSubplatform">module mraa.removeSubplatform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.removeSubplatform.removeSubplatform" id="apidoc.element.mraa.removeSubplatform.removeSubplatform">
+        function <span class="apidocSignatureSpan">mraa.</span>removeSubplatform
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeSubplatform = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.setLogLevel" id="apidoc.module.mraa.setLogLevel">module mraa.setLogLevel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.setLogLevel.setLogLevel" id="apidoc.element.mraa.setLogLevel.setLogLevel">
+        function <span class="apidocSignatureSpan">mraa.</span>setLogLevel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setLogLevel = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.setPriority" id="apidoc.module.mraa.setPriority">module mraa.setPriority</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.setPriority.setPriority" id="apidoc.element.mraa.setPriority.setPriority">
+        function <span class="apidocSignatureSpan">mraa.</span>setPriority
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPriority = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.spiFromDesc" id="apidoc.module.mraa.spiFromDesc">module mraa.spiFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.spiFromDesc.spiFromDesc" id="apidoc.element.mraa.spiFromDesc.spiFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>spiFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spiFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uartFromDesc" id="apidoc.module.mraa.uartFromDesc">module mraa.uartFromDesc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uartFromDesc.uartFromDesc" id="apidoc.element.mraa.uartFromDesc.uartFromDesc">
+        function <span class="apidocSignatureSpan">mraa.</span>uartFromDesc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uartFromDesc = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uint8Array" id="apidoc.module.mraa.uint8Array">module mraa.uint8Array</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.uint8Array" id="apidoc.element.mraa.uint8Array.uint8Array">
+        function <span class="apidocSignatureSpan">mraa.</span>uint8Array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uint8Array() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.frompointer" id="apidoc.element.mraa.uint8Array.frompointer">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.</span>frompointer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">frompointer = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uint8Array.frompointer" id="apidoc.module.mraa.uint8Array.frompointer">module mraa.uint8Array.frompointer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.frompointer.frompointer" id="apidoc.element.mraa.uint8Array.frompointer.frompointer">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.</span>frompointer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">frompointer = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uint8Array.prototype" id="apidoc.module.mraa.uint8Array.prototype">module mraa.uint8Array.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.equals" id="apidoc.element.mraa.uint8Array.prototype.equals">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.getCPtr" id="apidoc.element.mraa.uint8Array.prototype.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uint8Array.prototype.equals" id="apidoc.module.mraa.uint8Array.prototype.equals">module mraa.uint8Array.prototype.equals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.equals.equals" id="apidoc.element.mraa.uint8Array.prototype.equals.equals">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mraa.uint8Array.prototype.getCPtr" id="apidoc.module.mraa.uint8Array.prototype.getCPtr">module mraa.uint8Array.prototype.getCPtr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mraa.uint8Array.prototype.getCPtr.getCPtr" id="apidoc.element.mraa.uint8Array.prototype.getCPtr.getCPtr">
+        function <span class="apidocSignatureSpan">mraa.uint8Array.prototype.</span>getCPtr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCPtr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
