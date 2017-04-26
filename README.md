@@ -1,6 +1,6 @@
 # npmdoc-mraa
 
-#### api documentation for  [mraa (v1.6.1)](http://github.com/intel-iot-devkit/mraa)  [![npm package](https://img.shields.io/npm/v/npmdoc-mraa.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mraa) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mraa.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mraa)
+#### basic api documentation for  [mraa (v1.6.1)](http://github.com/intel-iot-devkit/mraa)  [![npm package](https://img.shields.io/npm/v/npmdoc-mraa.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mraa) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mraa.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mraa)
 
 #### IO library that helps you use I2c, SPI, gpio, uart, pwm, analog inputs (aio) and more on a number of platforms such as the Intel galileo, the Intel edison and others
 
@@ -62,7 +62,8 @@
     "scripts": {
         "install": "node-gyp rebuild"
     },
-    "version": "1.6.1"
+    "version": "1.6.1",
+    "bin": {}
 }
 ```
 
